@@ -13,24 +13,36 @@ a {
     color: inherit;
 }
 
+a:hover {
+    color: #00B400;
+    transition: all 0.3s ease 0s;
+}
+
 ul,li,ol {
     list-style: none;
 }
 
 .header {
-    margin: auto;
+    position: sticky;
+    top: 0;
+    padding: 10px 0 10px 0;
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    z-index: 1001;
 }
 
 .header__container {
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 
 .burger__menu {
     cursor: pointer;
-    height: 36px;
-    width: 36px;
+    height: 24px;
+    width: 24px;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -41,6 +53,20 @@ ul,li,ol {
     height: 3px;
     background-color: #00B400;
     display: block;
+}
+
+.nav__menu-item a:last-of-type {
+    display: flex;
+    align-items: center;
+}
+
+.nav__menu-item a>span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #d00000;
+    margin-right: 3px;
 }
 
 .logo {
@@ -72,7 +98,203 @@ ul,li,ol {
     display: flex;
     justify-content: space-between;
     padding-left: 0;
+    font-size: 18px;
 }
 
 .nav__menu-item {
 }
+
+.post__info-path span{
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    transform: rotate(135deg);
+}
+
+.welcome__post {
+
+}
+
+.welcome__post img {
+    max-width: 100%;
+}
+
+.welcome__post-info {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.post__info-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #505050;
+}
+
+.post__info-date svg {
+    margin-right: 8px;
+}
+
+.post__info-path {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.post__info-path a:last-of-type {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.post__info-path a>span {
+    cursor: default;
+}
+
+.welcome__post-title {
+    border-bottom: 1px solid #E6E6E6;
+    padding: 20px 0 30px 0;
+    color: #262626;
+    line-height: 1.5;
+    font-size: 35px;
+}
+
+
+.article__block {
+    display: grid;
+    grid-template-columns: 160px 1fr; /* Изменение ширины первого столбца на auto */
+    gap: 30px;
+    align-items: baseline;
+    height: 100%;
+}
+
+
+.widget {
+    position: sticky;
+    top: 60px; 
+    z-index: 1001;
+    width: 160px;
+}
+
+.text__changer {
+
+    border-radius: 25px;
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+    height: 26px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #727272;
+}
+
+.text__changer p {
+    cursor: pointer;
+}
+
+.text__changer p:active {
+    color: #00B400;
+}
+
+.text__changer p:first-of-type {
+    font-size: 12px;
+}
+
+.text__changer p:last-of-type {
+    font-size: 18px;
+}
+
+.share__container {
+    justify-content: space-between;
+    display: flex;
+    border-top: 1px solid #E6E6E6;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.share__container a {
+    display: flex;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 14%);
+    align-items: center;
+    justify-content: center;
+}
+
+.share__container a>svg {
+    width: 13px;
+    height: 14px;
+}
+
+
+.text__block {
+    color: #262626;
+}
+
+.text__block p {
+    font-weight: 400;
+    line-height: 2.25;
+    letter-spacing: 0.25px;
+}
+
+
+.form {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.form h3 {
+    padding-bottom: 30px;
+}
+
+.form label {
+    display: block; 
+    margin-bottom: 10px; 
+    color: #262626; 
+}
+
+.form input[type="text"],
+.form input[type="tel"] {
+    padding: 10px;
+    border: 1px solid #E6E6E6;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 400px;
+}
+
+.form button[type="submit"] {
+    background-color: #00B400; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.form button[type="submit"]:hover {
+    background-color: #009100; 
+}
+
+.form button[type="submit"]:focus {
+    outline: none; 
+}
+
+.form button:disabled {
+    background-color: #ccc; 
+    cursor: not-allowed; 
+}
+
+
+
