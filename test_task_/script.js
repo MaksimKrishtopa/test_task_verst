@@ -16,15 +16,15 @@
     const form = document.querySelector('.form');
     const submitButton = form.querySelector('button[type="submit"]');
     
-    // Проверяем, была ли форма уже отправлена ранее
+    
     if (localStorage.getItem('formSubmitted')) {
-        // Если да, делаем кнопку отправки формы недоступной для нажатия
+        
         submitButton.disabled = true;
-        submitButton.classList.add('disabled'); // Добавляем класс для стилизации неактивной кнопки
+        submitButton.classList.add('disabled'); 
     }
     
-    // Обработчик события отправки формы
+    
     form.addEventListener('submit', function(event) {
-        // При отправке формы сохраняем информацию о ее отправке в локальное хранилище
+        
         localStorage.setItem('formSubmitted', 'true');
     });
