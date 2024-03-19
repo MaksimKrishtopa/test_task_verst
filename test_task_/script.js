@@ -28,3 +28,12 @@
         
         localStorage.setItem('formSubmitted', 'true');
     });
+
+    const burgerMenu = document.querySelector('.burger__menu');
+    const navContainer = document.querySelector('.nav__container');
+
+    burgerMenu.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navContainer.classList.toggle('active');
+    });
+    
